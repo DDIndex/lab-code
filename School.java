@@ -86,6 +86,26 @@ public class School{
 
  	}
 	
+	 	public String toString(){
+		String str = "School name = "+ schoolName +" ,School Address = "+schoolAddress+" ,School Principal = "+principal+" ,Freshman = "+numberOfFreshman+" ,Sophmores = "+numberOfSophomores+" ,Juniors = "+numberOfJuniors+" ,Seniors = "+numberOfSeniors;
+		return str;
+
+ 	}
+	
+	public static void main(String[] args) {
+
+		System.out.println("Suncoast High Info.");
+		School s1= new School();
+		System.out.println(s1.toString);
+		
+		School s2 = new School("Not a High School","3210 abc street","Dr.Nobdy",321,123,456,654);
+		System.out.println(s2.toString);
+			
+		
+
+	}
+	
+	
 	public int getTotalStudents(){
 		int total = numberOfFreshmen + numberOfSophomores + setNumberOfJuniors + setNumberOfSeniors;
 		return total;
