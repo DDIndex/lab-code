@@ -77,7 +77,12 @@ public class School{
 		numberOfSeniors = oldSchool.numberOfSeniors;
  	}
 
- 	public toString(){
+        public String toString(){
+		String str = "School name = "+ schoolName +" ,School Address = "+schoolAddress+" ,School Principal = "+principal+" ,Freshman = "+numberOfFreshman+" ,Sophmores = "+numberOfSophomores+" ,Juniors = "+numberOfJuniors+" ,Seniors = "+numberOfSeniors;
+		return str;
+
+ 	
+	
 
  	}
 	
