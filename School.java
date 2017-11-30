@@ -1,11 +1,22 @@
 public class School{
-	private String schoolName = "Suncoast High";
-	private String schoolAddress="1717 Avenue S, Riviera Beach, FL 33404";
-	private String principal=" karen whetsell";
-	private int numberOfFreshmen=375;
-	private int numberOfSophomores=375;
-	private int numberOfJuniors=375;
-	private int numberOfSeniors=375;
+	private String schoolName;
+	private String schoolAddress;
+	private String principal;
+	private int numberOfFreshmen;
+	private int numberOfSophomores;
+	private int numberOfJuniors;
+	private int numberOfSeniors;
+    
+    public School()
+    {
+        schoolName = "Suncoast High";
+        schoolAddress = "1717 Avenue S, Riviera Beach, FL 33404";
+        principal = " karen whetsell";
+        numberOfFreshmen = 375;
+        numberOfSophomores = 375;
+        numberOfJuniors = 375;
+        numberOfSeniors = 375;
+    }
 	
 	public School(String schoolName, String schoolAddress, String principal,int numberOfFreshmen,int numberOfSophomores,int numberOfJuniors,int numberOfSeniors){
 		this.schoolName= schoolName;
@@ -16,6 +27,17 @@ public class School{
 		this.numberOfJuniors=numberOfJuniors;
 		this.numberOfSeniors=numberOfSeniors;
 	}
+    
+    //copy old school class
+	public School(School oldSchool) {
+    	this.schoolName = oldSchool.schoolName;
+        this.schoolAddress = oldSchool.schoolAddress;
+		this.principal = oldSchool.principal;
+		this.numberOfFreshmen = oldSchool.numberOfFreshmen;
+		this.numberOfSophomores = oldSchool.numberOfSophomores;
+		this.numberOfJuniors = oldSchool.numberOfJuniors;
+		this.numberOfSeniors = oldSchool.numberOfSeniors;
+ 	}
 	
 	public String getName(){
 		return schoolName;
@@ -65,53 +87,24 @@ public class School{
 	public void setNumberOfSeniors(int numberOfSeniors){
 		this.numberOfSeniors = numberOfSeniors;
 	}
-		
-	//copy old school class
-	public School(Schoool oldSchool) {
-    	schoolName = oldSchool.schoolName;
-        schoolAddress = oldSchool.schoolAddress;
-		principal = oldSchool.principal;
-		numberOfFreshmen = oldSchool.numberOfFreshmen;
-		numberOfSophomores = oldSchool.numberOfSophomores;
-		numberOfJuniors = oldSchool.numberOfJuniors;
-		numberOfSeniors = oldSchool.numberOfSeniors;
- 	}
 
-        public String toString(){
-		String str = "School name = "+ schoolName +" ,School Address = "+schoolAddress+" ,School Principal = "+principal+" ,Freshman = "+numberOfFreshman+" ,Sophmores = "+numberOfSophomores+" ,Juniors = "+numberOfJuniors+" ,Seniors = "+numberOfSeniors;
+    public String toString(){
+		String str = "School name = "+ schoolName +" ,School Address = "+schoolAddress+" ,School Principal = "+principal+" ,Freshmen = "+numberOfFreshmen+" ,Sophmores = "+numberOfSophomores+" ,Juniors = "+numberOfJuniors+" ,Seniors = "+numberOfSeniors;
 		return str;
-
- 	
-	
-
  	}
-	
-	 	public String toString(){
-		String str = "School name = "+ schoolName +" ,School Address = "+schoolAddress+" ,School Principal = "+principal+" ,Freshman = "+numberOfFreshman+" ,Sophmores = "+numberOfSophomores+" ,Juniors = "+numberOfJuniors+" ,Seniors = "+numberOfSeniors;
-		return str;
-
- 	}
-	
-	public static void main(String[] args) {
-
-		System.out.println("Suncoast High Info.");
-		School s1= new School();
-		System.out.println(s1.toString);
-		
-		School s2 = new School("Not a High School","3210 abc street","Dr.Nobdy",321,123,456,654);
-		System.out.println(s2.toString);
-			
-		
-
-	}
-	
-	
+    	
 	public int getTotalStudents(){
-		int total = numberOfFreshmen + numberOfSophomores + setNumberOfJuniors + setNumberOfSeniors;
+		int total = numberOfFreshmen + numberOfSophomores + numberOfJuniors + numberOfSeniors;
 		return total;
 	}
 	
+	public static void main(String[] args) {
+		System.out.println("Suncoast High Info.");
+		School s1= new School();
+		System.out.println(s1.toString());
+		
+		School s2 = new School("Not a High School","3210 abc street","Dr.Nobdy",321,123,456,654);
+		System.out.println(s2.toString());
+	}
+
 }
-
-
-
