@@ -82,7 +82,8 @@ public class School{
  	}
 	
 	public int getTotalStudents(){
-
+		int total = numberOfFreshmen + numberOfSophomores + setNumberOfJuniors + setNumberOfSeniors;
+		return total;
 	}
 	
 }
