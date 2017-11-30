@@ -1,0 +1,87 @@
+
+public class schoolClass {
+	private String schoolName = "Suncoast High";
+	private String schoolAddress="1717 Avenue S, Riviera Beach, FL 33404";
+	private String schoolPrincipal=" karen whetsell";
+	private double Freshman=375;
+	private double Sophmore=375;
+	private double Junior=375;
+	private double Senior=375;
+	
+	public schoolClass(String newName, String newAddress, String newPrincipal,double newFreshman,double newSophmore,double newJunior,double newSenior){
+		schoolName= newName;
+		schoolAddress=newAddress;
+		schoolPrincipal=newPrincipal;
+		Freshman=newFreshman;
+		Sophmore=newSophmore;
+		Junior=newJunior;
+		Senior=newSenior;
+	
+	}
+	
+	
+	public String getName(){
+		return schoolName;
+	}
+	
+	public String getAddress(){
+		return schoolAddress;
+	}
+	
+	public String getPrincipal(){
+		return schoolPrincipal;
+	}
+	public double getFreshman(){
+		return Freshman;
+	}
+	public double getSophmore(){
+		return Sophmore;
+	}
+	public double getJunior(){
+		return Junior;
+	}
+	public double getSenior(){
+		return Senior;
+	}
+	
+	public void setName(String myName){
+		schoolName= myName;
+	}
+	
+	public void setAddress(String myAddress){
+		schoolAddress= myAddress;
+	}
+	
+	public void setPrincipal(String myPrincipal){
+		schoolName= myPrincipal;
+	}
+	
+	public void setFreshman(double myFreshman){
+		Freshman= myFreshman;
+	}
+	public void setSophmore(double mySophmore){
+		Sophmore= mySophmore;
+	}
+	public void setJunior(double myJunior){
+		Junior = myJunior;
+	}
+	public void setSenior(double mySenior){
+		Senior = mySenior;
+	}
+	
+
+	
+
+	public School(schoolClass) {
+        schoolName = oldSchool.schoolName;
+         schoolAddress = oldSchool.schoolAddress;
+ }
+
+
+	
+	
+	
+}
+
+
+
