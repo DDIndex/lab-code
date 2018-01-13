@@ -1,0 +1,171 @@
+For and Foreach Loops
+Translate the following for loops into their foreach equivalents
+For example:
+This for loop:
+Circle[] circleArray = new Circle[10];
+.
+.
+.
+for(int i = 0; i < circleArray.length; i++) {
+	Circle circle = circleArray[i];
+	System.out.println(“Circle radius = “ + circle.getRadius());
+}
+Becomes this foreach loop
+for(Circle circle: circleArray) {
+	System.out.println(“Circle radius = “ + circle.getRadius());
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 
+double[] dArray = new double[20];
+.
+.
+.
+double sum = 0;
+for(int i = 0; i < dArray.length; i++) {
+	sum += dArray[i];
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+for(double d1 : dArray){
+Sum += d1;
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2.
+Triangle[] cArray = new Triangle[10];
+.
+.
+.
+for(int i = 0; i < cArray.length; i++) {
+	System.out.println(“Triangle area = cArray[i].getArea());
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+for(Triangle t1 : cArray){
+System.out.println(“Triangle area = “t1.getArea());
+3.
+String concat = “”;
+String[] strArray = {“abc”, “efg”, “hij”, “xyz”};
+for(int i = 0; i < strArray.length; i++) {
+	String str = strArray[i];
+	concat += str;
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+for (String c1 : concat){
+  
+	String str = c1[i];
+	concat += str;
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+4. 
+int prod = 1;
+int[] intArray = new int[10];
+.
+.
+.
+for(int i = 0; i < intArray.length; i++) {
+	prod  *=  intArray[i];
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+ for (int arr1 : intArray){
+	prod  *=  arr1[i];
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+5. 
+char[] charArray = new char{‘a’, ‘b’, ‘c’, ‘d’};
+for(int i = 0; i < charArray.length; i++) {
+	System.out.println(charArray[i]);
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+for(char ch1 : charArray){
+System.out.println(ch1[i]);
+}
+What is the output from each of the following:
+6. 
+int[] intArray = {1, 2, 3, 4, 5};
+int total = 0;
+for(int  num : intArray) {
+	total += num;
+}
+System.out.println(total);
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+15
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+7.
+class Rectangle {
+    private double length = 1;
+    private double width = 1;
+    public Rectangle(double l, double w) {
+         length = l;
+         width = w;
+     }
+     public Rectangle () {
+     }
+     public double getArea() {
+        return length  * width;
+    }
+    public static void main(String[] args) {
+Rectangle[] rArray = new Rectangle[5];
+rArray[0] = new Rectangle(3, 4);
+rArray[1] = new Rectangle(4, 6);
+rArray[2] = new Rectangle(7, 3);
+rArray[3] = new Rectangle(3, 1);
+rArray[4] = new Rectangle(4, 2);
+double totalArea = 0.0;
+for(Rectangle rect : rArray) {
+		totalArea += rect.getArea();
+}
+System.out.println(totalArea);
+   }
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+68.0
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+8. 
+String[] strArray = {“aaa”, “bbb”, “ccc”, “abc”, “efg”};
+String needToFind = “abc”;
+int index = -1;
+boolean  foundString = false;
+int i = 0;
+for(String str : strArray) {
+	if (needToFind.equals(str)) {
+		index = i;
+		foundString = true;
+	}
+i++;
+}
+if (foundString) {
+	System.out.println(“Found string “ + needToFind + “ at index “ + index);
+} else {
+	System.out.println(“Could not find string “ + needToFind); 
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+	Found string abc at index 3
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+9.
+double[] dArray = {7, 6, -2, 8, 12, 13};
+double min = dArray[0];
+for(double value : dArray) {
+	if (min > value) {
+		min = value;
+	}
+}
+System.out.println(“Minimum value = “ + min);
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+Minimum value = -2
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+10. 
+int[] checkArray = {2, -3, 4, 16, 13, 12, 19};
+for(int checkIt : checkArray) {
+	if (checkIt % 2 == 0) {
+		System.out.print(checkIt  +  “ “);
+	}
+}
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Answer:
+2 4 16 12
